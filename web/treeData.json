@@ -1,0 +1,2549 @@
+[{
+  "root": "hermes",
+  "self": {
+    "name": "main",
+    "path": "hermes"
+  },
+  "children": [
+    {
+      "root": "hermes",
+      "self": {
+        "name": "fmt",
+        "path": "fmt"
+      },
+      "children": null
+    },
+    {
+      "root": "hermes",
+      "self": {
+        "name": "os",
+        "path": "os"
+      },
+      "children": null
+    },
+    {
+      "root": "hermes",
+      "self": {
+        "name": "app",
+        "path": "hermes/app"
+      },
+      "children": [
+        {
+          "root": "hermes",
+          "self": {
+            "name": "ws",
+            "path": "hermes/app/ws"
+          },
+          "children": [
+            {
+              "root": "hermes",
+              "self": {
+                "name": "context",
+                "path": "context"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "json",
+                "path": "encoding/json"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "runtime",
+                "path": "runtime"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "time",
+                "path": "time"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "cache",
+                "path": "hermes/cache"
+              },
+              "children": [
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "json",
+                    "path": "encoding/json"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "config",
+                    "path": "hermes/config"
+                  },
+                  "children": [
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "models",
+                        "path": "hermes/models"
+                      },
+                      "children": [
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "json",
+                            "path": "encoding/json"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "errors",
+                            "path": "errors"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "amqp",
+                            "path": "github.com/streadway/amqp"
+                          },
+                          "children": null
+                        }
+                      ]
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "validation",
+                        "path": "github.com/go-ozzo/ozzo-validation"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "tools",
+                        "path": "github.com/lancer-kit/armory/tools"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "noble",
+                        "path": "github.com/lancer-kit/noble"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "ioutil",
+                        "path": "io/ioutil"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "log",
+                        "path": "hermes/log"
+                      },
+                      "children": [
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "fmt",
+                            "path": "fmt"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "io",
+                            "path": "io"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "os",
+                            "path": "os"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "path",
+                            "path": "path"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "strings",
+                            "path": "strings"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "time",
+                            "path": "time"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "noble",
+                            "path": "github.com/lancer-kit/noble"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "zerolog",
+                            "path": "github.com/rs/zerolog"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "log",
+                            "path": "github.com/rs/zerolog/log"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "lumberjack",
+                            "path": "gopkg.in/natefinch/lumberjack.v2"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "http",
+                            "path": "net/http"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "debug",
+                            "path": "runtime/debug"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "middleware",
+                            "path": "github.com/go-chi/chi/middleware"
+                          },
+                          "children": null
+                        }
+                      ]
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "metrics",
+                        "path": "hermes/metrics"
+                      },
+                      "children": [
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "context",
+                            "path": "context"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "json",
+                            "path": "encoding/json"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "fmt",
+                            "path": "fmt"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "ioutil",
+                            "path": "io/ioutil"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "strings",
+                            "path": "strings"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "sync",
+                            "path": "sync"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "atomic",
+                            "path": "sync/atomic"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "time",
+                            "path": "time"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "errors",
+                            "path": "github.com/pkg/errors"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "http",
+                            "path": "net/http"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "chi",
+                            "path": "github.com/go-chi/chi"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "middleware",
+                            "path": "github.com/go-chi/chi/middleware"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "validation",
+                            "path": "github.com/go-ozzo/ozzo-validation"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "uwe",
+                            "path": "github.com/lancer-kit/uwe/v2"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "api",
+                            "path": "github.com/lancer-kit/uwe/v2/presets/api"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "prometheus",
+                            "path": "github.com/prometheus/client_golang/prometheus"
+                          },
+                          "children": null
+                        },
+                        {
+                          "root": "hermes",
+                          "self": {
+                            "name": "promhttp",
+                            "path": "github.com/prometheus/client_golang/prometheus/promhttp"
+                          },
+                          "children": null
+                        }
+                      ]
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "api",
+                        "path": "github.com/lancer-kit/uwe/v2/presets/api"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "errors",
+                        "path": "github.com/pkg/errors"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "yaml",
+                        "path": "gopkg.in/yaml.v2"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "fmt",
+                        "path": "fmt"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "os",
+                        "path": "os"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "uwe",
+                        "path": "github.com/lancer-kit/uwe/v2"
+                      },
+                      "children": null
+                    }
+                  ]
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "models",
+                    "path": "hermes/models"
+                  },
+                  "children": [
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "json",
+                        "path": "encoding/json"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "errors",
+                        "path": "errors"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "amqp",
+                        "path": "github.com/streadway/amqp"
+                      },
+                      "children": null
+                    }
+                  ]
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "errors",
+                    "path": "github.com/pkg/errors"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "nutsdb",
+                    "path": "github.com/xujiajun/nutsdb"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "time",
+                    "path": "time"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "redis",
+                    "path": "github.com/gomodule/redigo/redis"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "fmt",
+                    "path": "fmt"
+                  },
+                  "children": null
+                }
+              ]
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "config",
+                "path": "hermes/config"
+              },
+              "children": [
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "models",
+                    "path": "hermes/models"
+                  },
+                  "children": [
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "json",
+                        "path": "encoding/json"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "errors",
+                        "path": "errors"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "amqp",
+                        "path": "github.com/streadway/amqp"
+                      },
+                      "children": null
+                    }
+                  ]
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "validation",
+                    "path": "github.com/go-ozzo/ozzo-validation"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "tools",
+                    "path": "github.com/lancer-kit/armory/tools"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "noble",
+                    "path": "github.com/lancer-kit/noble"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "ioutil",
+                    "path": "io/ioutil"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "log",
+                    "path": "hermes/log"
+                  },
+                  "children": [
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "fmt",
+                        "path": "fmt"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "io",
+                        "path": "io"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "os",
+                        "path": "os"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "path",
+                        "path": "path"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "strings",
+                        "path": "strings"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "time",
+                        "path": "time"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "noble",
+                        "path": "github.com/lancer-kit/noble"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "zerolog",
+                        "path": "github.com/rs/zerolog"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "log",
+                        "path": "github.com/rs/zerolog/log"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "lumberjack",
+                        "path": "gopkg.in/natefinch/lumberjack.v2"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "http",
+                        "path": "net/http"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "debug",
+                        "path": "runtime/debug"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "middleware",
+                        "path": "github.com/go-chi/chi/middleware"
+                      },
+                      "children": null
+                    }
+                  ]
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "metrics",
+                    "path": "hermes/metrics"
+                  },
+                  "children": [
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "context",
+                        "path": "context"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "json",
+                        "path": "encoding/json"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "fmt",
+                        "path": "fmt"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "ioutil",
+                        "path": "io/ioutil"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "strings",
+                        "path": "strings"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "sync",
+                        "path": "sync"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "atomic",
+                        "path": "sync/atomic"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "time",
+                        "path": "time"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "errors",
+                        "path": "github.com/pkg/errors"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "http",
+                        "path": "net/http"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "chi",
+                        "path": "github.com/go-chi/chi"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "middleware",
+                        "path": "github.com/go-chi/chi/middleware"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "validation",
+                        "path": "github.com/go-ozzo/ozzo-validation"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "uwe",
+                        "path": "github.com/lancer-kit/uwe/v2"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "api",
+                        "path": "github.com/lancer-kit/uwe/v2/presets/api"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "prometheus",
+                        "path": "github.com/prometheus/client_golang/prometheus"
+                      },
+                      "children": null
+                    },
+                    {
+                      "root": "hermes",
+                      "self": {
+                        "name": "promhttp",
+                        "path": "github.com/prometheus/client_golang/prometheus/promhttp"
+                      },
+                      "children": null
+                    }
+                  ]
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "api",
+                    "path": "github.com/lancer-kit/uwe/v2/presets/api"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "errors",
+                    "path": "github.com/pkg/errors"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "yaml",
+                    "path": "gopkg.in/yaml.v2"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "fmt",
+                    "path": "fmt"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "os",
+                    "path": "os"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "uwe",
+                    "path": "github.com/lancer-kit/uwe/v2"
+                  },
+                  "children": null
+                }
+              ]
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "metrics",
+                "path": "hermes/metrics"
+              },
+              "children": [
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "context",
+                    "path": "context"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "json",
+                    "path": "encoding/json"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "fmt",
+                    "path": "fmt"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "ioutil",
+                    "path": "io/ioutil"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "strings",
+                    "path": "strings"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "sync",
+                    "path": "sync"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "atomic",
+                    "path": "sync/atomic"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "time",
+                    "path": "time"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "errors",
+                    "path": "github.com/pkg/errors"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "http",
+                    "path": "net/http"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "chi",
+                    "path": "github.com/go-chi/chi"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "middleware",
+                    "path": "github.com/go-chi/chi/middleware"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "validation",
+                    "path": "github.com/go-ozzo/ozzo-validation"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "uwe",
+                    "path": "github.com/lancer-kit/uwe/v2"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "api",
+                    "path": "github.com/lancer-kit/uwe/v2/presets/api"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "prometheus",
+                    "path": "github.com/prometheus/client_golang/prometheus"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "promhttp",
+                    "path": "github.com/prometheus/client_golang/prometheus/promhttp"
+                  },
+                  "children": null
+                }
+              ]
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "models",
+                "path": "hermes/models"
+              },
+              "children": [
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "json",
+                    "path": "encoding/json"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "errors",
+                    "path": "errors"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "amqp",
+                    "path": "github.com/streadway/amqp"
+                  },
+                  "children": null
+                }
+              ]
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "uwe",
+                "path": "github.com/lancer-kit/uwe/v2"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "errors",
+                "path": "github.com/pkg/errors"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "zerolog",
+                "path": "github.com/rs/zerolog"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "io",
+                "path": "io"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "http",
+                "path": "net/http"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "sync",
+                "path": "sync"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "websocket",
+                "path": "github.com/gorilla/websocket"
+              },
+              "children": null
+            }
+          ]
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "config",
+            "path": "hermes/config"
+          },
+          "children": [
+            {
+              "root": "hermes",
+              "self": {
+                "name": "models",
+                "path": "hermes/models"
+              },
+              "children": [
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "json",
+                    "path": "encoding/json"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "errors",
+                    "path": "errors"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "amqp",
+                    "path": "github.com/streadway/amqp"
+                  },
+                  "children": null
+                }
+              ]
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "validation",
+                "path": "github.com/go-ozzo/ozzo-validation"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "tools",
+                "path": "github.com/lancer-kit/armory/tools"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "noble",
+                "path": "github.com/lancer-kit/noble"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "ioutil",
+                "path": "io/ioutil"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "log",
+                "path": "hermes/log"
+              },
+              "children": [
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "fmt",
+                    "path": "fmt"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "io",
+                    "path": "io"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "os",
+                    "path": "os"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "path",
+                    "path": "path"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "strings",
+                    "path": "strings"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "time",
+                    "path": "time"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "noble",
+                    "path": "github.com/lancer-kit/noble"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "zerolog",
+                    "path": "github.com/rs/zerolog"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "log",
+                    "path": "github.com/rs/zerolog/log"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "lumberjack",
+                    "path": "gopkg.in/natefinch/lumberjack.v2"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "http",
+                    "path": "net/http"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "debug",
+                    "path": "runtime/debug"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "middleware",
+                    "path": "github.com/go-chi/chi/middleware"
+                  },
+                  "children": null
+                }
+              ]
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "metrics",
+                "path": "hermes/metrics"
+              },
+              "children": [
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "context",
+                    "path": "context"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "json",
+                    "path": "encoding/json"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "fmt",
+                    "path": "fmt"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "ioutil",
+                    "path": "io/ioutil"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "strings",
+                    "path": "strings"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "sync",
+                    "path": "sync"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "atomic",
+                    "path": "sync/atomic"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "time",
+                    "path": "time"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "errors",
+                    "path": "github.com/pkg/errors"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "http",
+                    "path": "net/http"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "chi",
+                    "path": "github.com/go-chi/chi"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "middleware",
+                    "path": "github.com/go-chi/chi/middleware"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "validation",
+                    "path": "github.com/go-ozzo/ozzo-validation"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "uwe",
+                    "path": "github.com/lancer-kit/uwe/v2"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "api",
+                    "path": "github.com/lancer-kit/uwe/v2/presets/api"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "prometheus",
+                    "path": "github.com/prometheus/client_golang/prometheus"
+                  },
+                  "children": null
+                },
+                {
+                  "root": "hermes",
+                  "self": {
+                    "name": "promhttp",
+                    "path": "github.com/prometheus/client_golang/prometheus/promhttp"
+                  },
+                  "children": null
+                }
+              ]
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "api",
+                "path": "github.com/lancer-kit/uwe/v2/presets/api"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "errors",
+                "path": "github.com/pkg/errors"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "yaml",
+                "path": "gopkg.in/yaml.v2"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "fmt",
+                "path": "fmt"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "os",
+                "path": "os"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "uwe",
+                "path": "github.com/lancer-kit/uwe/v2"
+              },
+              "children": null
+            }
+          ]
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "uwe",
+            "path": "github.com/lancer-kit/uwe/v2"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "zerolog",
+            "path": "github.com/rs/zerolog"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "context",
+            "path": "context"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "sync",
+            "path": "sync"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "metrics",
+            "path": "hermes/metrics"
+          },
+          "children": [
+            {
+              "root": "hermes",
+              "self": {
+                "name": "context",
+                "path": "context"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "json",
+                "path": "encoding/json"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "fmt",
+                "path": "fmt"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "ioutil",
+                "path": "io/ioutil"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "strings",
+                "path": "strings"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "sync",
+                "path": "sync"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "atomic",
+                "path": "sync/atomic"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "time",
+                "path": "time"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "errors",
+                "path": "github.com/pkg/errors"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "http",
+                "path": "net/http"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "chi",
+                "path": "github.com/go-chi/chi"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "middleware",
+                "path": "github.com/go-chi/chi/middleware"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "validation",
+                "path": "github.com/go-ozzo/ozzo-validation"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "uwe",
+                "path": "github.com/lancer-kit/uwe/v2"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "api",
+                "path": "github.com/lancer-kit/uwe/v2/presets/api"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "prometheus",
+                "path": "github.com/prometheus/client_golang/prometheus"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "promhttp",
+                "path": "github.com/prometheus/client_golang/prometheus/promhttp"
+              },
+              "children": null
+            }
+          ]
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "models",
+            "path": "hermes/models"
+          },
+          "children": [
+            {
+              "root": "hermes",
+              "self": {
+                "name": "json",
+                "path": "encoding/json"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "errors",
+                "path": "errors"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "amqp",
+                "path": "github.com/streadway/amqp"
+              },
+              "children": null
+            }
+          ]
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "errors",
+            "path": "github.com/pkg/errors"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "amqp",
+            "path": "github.com/streadway/amqp"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "http",
+            "path": "net/http"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "runtime",
+            "path": "runtime"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "time",
+            "path": "time"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "log",
+            "path": "hermes/log"
+          },
+          "children": [
+            {
+              "root": "hermes",
+              "self": {
+                "name": "fmt",
+                "path": "fmt"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "io",
+                "path": "io"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "os",
+                "path": "os"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "path",
+                "path": "path"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "strings",
+                "path": "strings"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "time",
+                "path": "time"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "noble",
+                "path": "github.com/lancer-kit/noble"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "zerolog",
+                "path": "github.com/rs/zerolog"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "log",
+                "path": "github.com/rs/zerolog/log"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "lumberjack",
+                "path": "gopkg.in/natefinch/lumberjack.v2"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "http",
+                "path": "net/http"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "debug",
+                "path": "runtime/debug"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "middleware",
+                "path": "github.com/go-chi/chi/middleware"
+              },
+              "children": null
+            }
+          ]
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "web",
+            "path": "hermes/web"
+          },
+          "children": [
+            {
+              "root": "hermes",
+              "self": {
+                "name": "bytes",
+                "path": "bytes"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "gzip",
+                "path": "compress/gzip"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "fmt",
+                "path": "fmt"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "io",
+                "path": "io"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "ioutil",
+                "path": "io/ioutil"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "os",
+                "path": "os"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "filepath",
+                "path": "path/filepath"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "strings",
+                "path": "strings"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "time",
+                "path": "time"
+              },
+              "children": null
+            }
+          ]
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "chi",
+            "path": "github.com/go-chi/chi"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "middleware",
+            "path": "github.com/go-chi/chi/middleware"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "cors",
+            "path": "github.com/go-chi/cors"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "websocket",
+            "path": "github.com/gorilla/websocket"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "httpx",
+            "path": "github.com/lancer-kit/armory/api/httpx"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "render",
+            "path": "github.com/lancer-kit/armory/api/render"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "noble",
+            "path": "github.com/lancer-kit/noble"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "api",
+            "path": "github.com/lancer-kit/uwe/v2/presets/api"
+          },
+          "children": null
+        }
+      ]
+    },
+    {
+      "root": "hermes",
+      "self": {
+        "name": "config",
+        "path": "hermes/config"
+      },
+      "children": [
+        {
+          "root": "hermes",
+          "self": {
+            "name": "models",
+            "path": "hermes/models"
+          },
+          "children": [
+            {
+              "root": "hermes",
+              "self": {
+                "name": "json",
+                "path": "encoding/json"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "errors",
+                "path": "errors"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "amqp",
+                "path": "github.com/streadway/amqp"
+              },
+              "children": null
+            }
+          ]
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "validation",
+            "path": "github.com/go-ozzo/ozzo-validation"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "tools",
+            "path": "github.com/lancer-kit/armory/tools"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "noble",
+            "path": "github.com/lancer-kit/noble"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "ioutil",
+            "path": "io/ioutil"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "log",
+            "path": "hermes/log"
+          },
+          "children": [
+            {
+              "root": "hermes",
+              "self": {
+                "name": "fmt",
+                "path": "fmt"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "io",
+                "path": "io"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "os",
+                "path": "os"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "path",
+                "path": "path"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "strings",
+                "path": "strings"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "time",
+                "path": "time"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "noble",
+                "path": "github.com/lancer-kit/noble"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "zerolog",
+                "path": "github.com/rs/zerolog"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "log",
+                "path": "github.com/rs/zerolog/log"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "lumberjack",
+                "path": "gopkg.in/natefinch/lumberjack.v2"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "http",
+                "path": "net/http"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "debug",
+                "path": "runtime/debug"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "middleware",
+                "path": "github.com/go-chi/chi/middleware"
+              },
+              "children": null
+            }
+          ]
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "metrics",
+            "path": "hermes/metrics"
+          },
+          "children": [
+            {
+              "root": "hermes",
+              "self": {
+                "name": "context",
+                "path": "context"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "json",
+                "path": "encoding/json"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "fmt",
+                "path": "fmt"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "ioutil",
+                "path": "io/ioutil"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "strings",
+                "path": "strings"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "sync",
+                "path": "sync"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "atomic",
+                "path": "sync/atomic"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "time",
+                "path": "time"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "errors",
+                "path": "github.com/pkg/errors"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "http",
+                "path": "net/http"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "chi",
+                "path": "github.com/go-chi/chi"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "middleware",
+                "path": "github.com/go-chi/chi/middleware"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "validation",
+                "path": "github.com/go-ozzo/ozzo-validation"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "uwe",
+                "path": "github.com/lancer-kit/uwe/v2"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "api",
+                "path": "github.com/lancer-kit/uwe/v2/presets/api"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "prometheus",
+                "path": "github.com/prometheus/client_golang/prometheus"
+              },
+              "children": null
+            },
+            {
+              "root": "hermes",
+              "self": {
+                "name": "promhttp",
+                "path": "github.com/prometheus/client_golang/prometheus/promhttp"
+              },
+              "children": null
+            }
+          ]
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "api",
+            "path": "github.com/lancer-kit/uwe/v2/presets/api"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "errors",
+            "path": "github.com/pkg/errors"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "yaml",
+            "path": "gopkg.in/yaml.v2"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "fmt",
+            "path": "fmt"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "os",
+            "path": "os"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "uwe",
+            "path": "github.com/lancer-kit/uwe/v2"
+          },
+          "children": null
+        }
+      ]
+    },
+    {
+      "root": "hermes",
+      "self": {
+        "name": "log",
+        "path": "hermes/log"
+      },
+      "children": [
+        {
+          "root": "hermes",
+          "self": {
+            "name": "fmt",
+            "path": "fmt"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "io",
+            "path": "io"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "os",
+            "path": "os"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "path",
+            "path": "path"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "strings",
+            "path": "strings"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "time",
+            "path": "time"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "noble",
+            "path": "github.com/lancer-kit/noble"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "zerolog",
+            "path": "github.com/rs/zerolog"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "log",
+            "path": "github.com/rs/zerolog/log"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "lumberjack",
+            "path": "gopkg.in/natefinch/lumberjack.v2"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "http",
+            "path": "net/http"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "debug",
+            "path": "runtime/debug"
+          },
+          "children": null
+        },
+        {
+          "root": "hermes",
+          "self": {
+            "name": "middleware",
+            "path": "github.com/go-chi/chi/middleware"
+          },
+          "children": null
+        }
+      ]
+    },
+    {
+      "root": "hermes",
+      "self": {
+        "name": "cli",
+        "path": "github.com/urfave/cli"
+      },
+      "children": null
+    }
+  ]
+}
+]
