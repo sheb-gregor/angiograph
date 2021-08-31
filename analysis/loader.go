@@ -15,10 +15,15 @@ type PkgShort struct {
 	Path string `json:"path"`
 }
 
+func (s PkgShort) String() string {
+	return s.Name + " (" + s.Path + ")"
+}
+
 type PkgTree struct {
-	Root    string    `json:"root"`
-	Self    PkgShort  `json:"self"`
-	Imports []PkgTree `json:"imports"`
+	Root    string    `json:"-"`
+	Self    PkgShort  `json:"-"`
+	ID      string    `json:"id"`
+	Imports []PkgTree `json:"nodes"`
 }
 
 func NewPkgTree(pkg *types.Package) *PkgTree {
@@ -33,6 +38,7 @@ func (tree *PkgTree) Set(pkg *types.Package, root string) {
 		Path: pkg.Path(),
 	}
 	tree.Root = root
+	tree.ID = tree.Self.String()
 	if !strings.HasPrefix(tree.Self.Path, root) {
 		return
 	}
@@ -50,20 +56,20 @@ func (tree *PkgTree) IntoJSON() string {
 
 func (tree *PkgTree) IntoTree() treeprint.Tree {
 	treePrint := treeprint.New()
-	tree.addToTreePrint(treePrint)
-	return treePrint
+	return tree.addToTreePrint(treePrint)
 }
 
-func (tree *PkgTree) addToTreePrint(treePrint treeprint.Tree) {
+func (tree *PkgTree) addToTreePrint(treePrint treeprint.Tree) treeprint.Tree {
 	if len(tree.Imports) > 0 {
-		treePrint.AddBranch(tree.Self.Name + " (" + tree.Self.Path + ")")
+		treePrint = treePrint.AddBranch(tree.Self.Name + " (" + tree.Self.Path + ")")
 	} else {
-		treePrint.AddNode(tree.Self.Name + " (" + tree.Self.Path + ")")
+		treePrint = treePrint.AddNode(tree.Self.Name + " (" + tree.Self.Path + ")")
 	}
 
 	for _, pkgTree := range tree.Imports {
 		pkgTree.addToTreePrint(treePrint)
 	}
+	return treePrint
 }
 
 func (opts AnalyseOpts) ImportsTree() (string, error) {
@@ -82,13 +88,80 @@ func (opts AnalyseOpts) ImportsTree() (string, error) {
 	// resq, err := json.MarshalIndent(mainPkgs, "", "  ")
 	// fmt.Println(string(resq))
 
-	// res, err := json.MarshalIndent(lPkgs, "", "  ")
-	// fmt.Println(string(res))
-
 	for _, pkg := range mainPkgs {
+		// print("", pkg.Pkg, pkg.Pkg.Path())
+
+		// fmt.Println(NewPkgTree(pkg.Pkg).IntoJSON())
 		// fmt.Println(NewPkgTree(pkg.Pkg).IntoTree().String())
-		fmt.Println(NewPkgTree(pkg.Pkg).IntoJSON())
+		index := NewPkgIndex(pkg.Pkg)
+
+		fmt.Println(index.IntoJSON())
+		// fmt.Println(NewPkgTree(pkg.Pkg).IntoJSON())
 	}
 
 	return "", err
+}
+
+func print(prefix string, pkg *types.Package, root string) {
+
+	_, ok := stdLib[strings.Split(pkg.Path(), "/")[0]]
+	if ok {
+		return
+	}
+
+	if !strings.Contains(pkg.Path(), root) {
+		return
+	}
+
+	for _, spkg := range pkg.Imports() {
+		fmt.Println(prefix+"-->", spkg.Path())
+		print(prefix+"----", spkg, root)
+	}
+}
+
+var stdLib = map[string]struct{}{
+	"archive":   {},
+	"bufio":     {},
+	"builtin":   {},
+	"bytes":     {},
+	"cmd":       {},
+	"compress":  {},
+	"container": {},
+	"context":   {},
+	"crypto":    {},
+	"database":  {},
+	"debug":     {},
+	"embed":     {},
+	"encoding":  {},
+	"errors":    {},
+	"expvar":    {},
+	"flag":      {},
+	"fmt":       {},
+	"hash":      {},
+	"html":      {},
+	"image":     {},
+	"index":     {},
+	"internal":  {},
+	"io":        {},
+	"log":       {},
+	"math":      {},
+	"mime":      {},
+	"net":       {},
+	"os":        {},
+	"path":      {},
+	"plugin":    {},
+	"reflect":   {},
+	"regexp":    {},
+	"runtime":   {},
+	"sort":      {},
+	"strconv":   {},
+	"strings":   {},
+	"sync":      {},
+	"syscall":   {},
+	"testdata":  {},
+	"testing":   {},
+	"text":      {},
+	"time":      {},
+	"unicode":   {},
+	"unsafe":    {},
 }
