@@ -1,0 +1,253 @@
+@startuml
+left to right direction
+  
+ package "gitlab.com/jaxnet/core/miner" { 
+    object "gitlab.com/jaxnet/core/miner" as APP_ 
+    object "net/http/pprof" as net_http_pprof 
+    object "gitlab.com/jaxnet/core/miner/core/utils" as APP__core_utils 
+    object "github.com/btcsuite/btcutil" as github.com_btcsuite_btcutil 
+    object "github.com/davecgh/go-spew/spew" as github.com_davecgh_go_spew_spew 
+    object "context" as context 
+    object "gitlab.com/jaxnet/jaxnetd/types/jaxjson" as gitlab.com_jaxnet_jaxnetd_types_jaxjson 
+    object "gitlab.com/jaxnet/jaxnetd/types/pow" as gitlab.com_jaxnet_jaxnetd_types_pow 
+    object "github.com/btcsuite/btcd/rpcclient" as github.com_btcsuite_btcd_rpcclient 
+    object "gitlab.com/jaxnet/core/miner/core/state" as APP__core_state 
+    object "gitlab.com/jaxnet/core/miner/core/stratum/bans" as APP__core_stratum_bans 
+    object "net/http" as net_http 
+    object "sync" as sync 
+    object "gitlab.com/jaxnet/core/miner/core/communicator/events" as APP__core_communicator_events 
+    object "gitlab.com/jaxnet/core/miner/core/miner/tasks" as APP__core_miner_tasks 
+    object "gitlab.com/jaxnet/jaxnetd/types/wire" as gitlab.com_jaxnet_jaxnetd_types_wire 
+    object "gitlab.com/jaxnet/core/miner/core/miner" as APP__core_miner 
+    object "gitlab.com/jaxnet/core/miner/core/stratum/vardiff" as APP__core_stratum_vardiff 
+    object "gitlab.com/jaxnet/core/miner/core/communicator" as APP__core_communicator 
+    object "gitlab.com/jaxnet/core/miner/core/e" as APP__core_e 
+    object "github.com/rs/zerolog/log" as github.com_rs_zerolog_log 
+    object "github.com/pkg/errors" as github.com_pkg_errors 
+    object "github.com/rs/zerolog" as github.com_rs_zerolog 
+    object "gitlab.com/jaxnet/core/miner/core/logger" as APP__core_logger 
+    object "gopkg.in/natefinch/lumberjack.v2" as gopkg.in_natefinch_lumberjack.v2 
+    object "io/ioutil" as io_ioutil 
+    object "strconv" as strconv 
+    object "net" as net 
+    object "encoding/json" as encoding_json 
+    object "gitlab.com/jaxnet/core/miner/core/stratum/types" as APP__core_stratum_types 
+    object "github.com/google/uuid" as github.com_google_uuid 
+    object "github.com/btcsuite/btcd/wire" as github.com_btcsuite_btcd_wire 
+    object "bytes" as bytes 
+    object "encoding/hex" as encoding_hex 
+    object "gitlab.com/jaxnet/core/miner/core/settings" as APP__core_settings 
+    object "fmt" as fmt 
+    object "bufio" as bufio 
+    object "github.com/btcsuite/btcd/btcjson" as github.com_btcsuite_btcd_btcjson 
+    object "time" as time 
+    object "strings" as strings 
+    object "sort" as sort 
+    object "github.com/btcsuite/btcd/chaincfg/chainhash" as github.com_btcsuite_btcd_chaincfg_chainhash 
+    object "log" as log 
+    object "path" as path 
+    object "gitlab.com/jaxnet/core/merged-mining-tree" as gitlab.com_jaxnet_core_merged_mining_tree 
+    object "gitlab.com/jaxnet/jaxnetd/types/chainhash" as gitlab.com_jaxnet_jaxnetd_types_chainhash 
+    object "gitlab.com/jaxnet/jaxnetd/types/chaincfg" as gitlab.com_jaxnet_jaxnetd_types_chaincfg 
+    object "gitlab.com/jaxnet/jaxnetd/node/encoder" as gitlab.com_jaxnet_jaxnetd_node_encoder 
+    object "gitlab.com/jaxnet/core/miner/core/stratum" as APP__core_stratum 
+    object "gitlab.com/jaxnet/core/miner/core/common" as APP__core_common 
+    object "math/rand" as math_rand 
+    object "errors" as errors 
+    object "runtime" as runtime 
+    object "gitlab.com/jaxnet/jaxnetd/node/mining" as gitlab.com_jaxnet_jaxnetd_node_mining 
+    object "regexp" as regexp 
+    object "os" as os 
+    object "math/big" as math_big 
+    object "github.com/btcsuite/btcd/blockchain" as github.com_btcsuite_btcd_blockchain 
+    object "gitlab.com/jaxnet/jaxnetd/txscript" as gitlab.com_jaxnet_jaxnetd_txscript 
+    object "encoding/binary" as encoding_binary 
+    object "sync/atomic" as sync_atomic 
+    object "syscall" as syscall 
+    object "math" as math 
+    object "gitlab.com/jaxnet/jaxnetd/jaxutil" as gitlab.com_jaxnet_jaxnetd_jaxutil 
+    object "gitlab.com/jaxnet/jaxnetd/node/chaindata" as gitlab.com_jaxnet_jaxnetd_node_chaindata 
+    object "io" as io 
+    object "gopkg.in/yaml.v3" as gopkg.in_yaml.v3 
+    object "os/signal" as os_signal 
+    object "gitlab.com/jaxnet/jaxnetd/network/rpcclient" as gitlab.com_jaxnet_jaxnetd_network_rpcclient 
+    object "flag" as flag 
+
+
+  APP__core_settings --> github.com_btcsuite_btcd_rpcclient 
+  APP__core_communicator --> github.com_btcsuite_btcd_rpcclient 
+  APP_ --> APP__core_state 
+  APP__core_stratum --> APP__core_state 
+  APP__core_miner --> APP__core_state 
+  APP__core_state --> APP__core_miner_tasks 
+  APP__core_state --> gitlab.com_jaxnet_jaxnetd_node_mining 
+  APP__core_state --> gitlab.com_jaxnet_jaxnetd_jaxutil 
+  APP__core_state --> context 
+  APP__core_state --> sort 
+  APP__core_state --> sync 
+  APP__core_state --> gitlab.com_jaxnet_jaxnetd_types_chainhash 
+  APP__core_state --> APP__core_communicator_events 
+  APP__core_state --> encoding_hex 
+  APP__core_state --> APP__core_settings 
+  APP__core_state --> gitlab.com_jaxnet_jaxnetd_types_wire 
+  APP__core_state --> bytes 
+  APP__core_state --> github.com_btcsuite_btcutil 
+  APP__core_state --> time 
+  APP__core_state --> gitlab.com_jaxnet_jaxnetd_node_chaindata 
+  APP__core_state --> gitlab.com_jaxnet_core_merged_mining_tree 
+  APP__core_state --> github.com_btcsuite_btcd_blockchain 
+  APP__core_state --> math_big 
+  APP__core_state --> APP__core_common 
+  APP__core_state --> APP__core_e 
+  APP__core_state --> APP__core_logger 
+  APP__core_state --> gitlab.com_jaxnet_jaxnetd_types_jaxjson 
+  APP__core_state --> fmt 
+  APP__core_state --> strconv 
+  APP__core_state --> github.com_btcsuite_btcd_chaincfg_chainhash 
+  APP__core_state --> github.com_btcsuite_btcd_wire 
+  APP__core_state --> APP__core_utils 
+  APP__core_state --> github.com_btcsuite_btcd_btcjson 
+  APP__core_stratum --> APP__core_stratum_bans 
+  APP__core_stratum_bans --> time 
+  APP__core_stratum_bans --> APP__core_settings 
+  APP_ --> context 
+  APP__core_communicator --> context 
+  APP__core_utils --> context 
+  APP__core_miner --> context 
+  APP__core_communicator_events --> gitlab.com_jaxnet_jaxnetd_types_jaxjson 
+  APP__core_settings --> gitlab.com_jaxnet_jaxnetd_types_jaxjson 
+  APP__core_communicator --> gitlab.com_jaxnet_jaxnetd_types_jaxjson 
+  APP__core_stratum_types --> gitlab.com_jaxnet_jaxnetd_types_pow 
+  APP__core_miner_tasks --> gitlab.com_jaxnet_jaxnetd_types_pow 
+  APP__core_miner --> gitlab.com_jaxnet_jaxnetd_types_pow 
+  APP__core_stratum --> gitlab.com_jaxnet_jaxnetd_types_pow 
+  APP__core_miner --> APP__core_miner_tasks 
+  APP__core_stratum --> APP__core_miner_tasks 
+  APP__core_communicator --> APP__core_miner_tasks 
+  APP__core_miner_tasks --> github.com_btcsuite_btcd_wire 
+  APP__core_miner_tasks --> gitlab.com_jaxnet_jaxnetd_types_chainhash 
+  APP__core_miner_tasks --> math_big 
+  APP__core_miner_tasks --> time 
+  APP__core_miner_tasks --> gitlab.com_jaxnet_jaxnetd_types_wire 
+  APP__core_miner_tasks --> github.com_rs_zerolog 
+  APP__core_miner_tasks --> APP__core_utils 
+  APP__core_miner_tasks --> APP__core_common 
+  APP__core_utils --> gitlab.com_jaxnet_jaxnetd_types_wire 
+  APP__core_communicator --> gitlab.com_jaxnet_jaxnetd_types_wire 
+  APP_ --> APP__core_miner 
+  APP__core_miner --> APP__core_settings 
+  APP__core_miner --> APP__core_utils 
+  APP__core_miner --> gitlab.com_jaxnet_jaxnetd_node_encoder 
+  APP__core_miner --> math 
+  APP__core_miner --> time 
+  APP__core_miner --> gitlab.com_jaxnet_jaxnetd_types_chainhash 
+  APP__core_miner --> bytes 
+  APP__core_miner --> math_big 
+  APP__core_miner --> sync 
+  APP__core_miner --> github.com_rs_zerolog 
+  APP__core_miner --> APP__core_logger 
+  APP__core_stratum --> APP__core_stratum_vardiff 
+  APP__core_stratum_vardiff --> time 
+  APP__core_stratum_vardiff --> APP__core_settings 
+  APP_ --> net_http 
+  APP_ --> sync 
+  APP__core_utils --> sync 
+  APP__core_communicator --> APP__core_communicator_events 
+  APP__core_communicator_events --> github.com_btcsuite_btcd_btcjson 
+  APP__core_communicator_events --> APP__core_common 
+  APP_ --> APP__core_communicator 
+  APP__core_communicator --> APP__core_settings 
+  APP__core_communicator --> github.com_rs_zerolog 
+  APP__core_communicator --> APP__core_utils 
+  APP__core_communicator --> fmt 
+  APP__core_communicator --> github.com_btcsuite_btcd_btcjson 
+  APP__core_communicator --> github.com_btcsuite_btcd_wire 
+  APP__core_communicator --> APP__core_common 
+  APP__core_communicator --> gitlab.com_jaxnet_jaxnetd_network_rpcclient 
+  APP__core_communicator --> gitlab.com_jaxnet_jaxnetd_jaxutil 
+  APP__core_communicator --> github.com_btcsuite_btcutil 
+  APP__core_communicator --> math_rand 
+  APP__core_communicator --> time 
+  APP__core_communicator --> APP__core_logger 
+  APP__core_settings --> APP__core_e 
+  APP_ --> APP__core_e 
+  APP__core_e --> errors 
+  APP__core_e --> log 
+  APP__core_logger --> github.com_rs_zerolog_log 
+  APP__core_logger --> gopkg.in_natefinch_lumberjack.v2 
+  APP__core_settings --> io_ioutil 
+  APP__core_settings --> strconv 
+  APP__core_stratum --> strconv 
+  APP__core_stratum_types --> strconv 
+  APP__core_stratum --> net 
+  APP__core_utils --> github.com_pkg_errors 
+  APP__core_logger --> github.com_rs_zerolog 
+  APP__core_stratum --> github.com_rs_zerolog 
+  APP__core_settings --> APP__core_logger 
+  APP_ --> APP__core_logger 
+  APP__core_stratum --> APP__core_logger 
+  APP__core_stratum_types --> APP__core_logger 
+  APP__core_logger --> os 
+  APP__core_logger --> path 
+  APP__core_logger --> io 
+  APP__core_stratum --> encoding_json 
+  APP__core_stratum_types --> encoding_json 
+  APP__core_stratum --> APP__core_stratum_types 
+  APP__core_stratum_types --> encoding_hex 
+  APP__core_stratum_types --> fmt 
+  APP__core_stratum_types --> APP__core_utils 
+  APP__core_stratum --> github.com_google_uuid 
+  APP_ --> APP__core_settings 
+  APP__core_stratum --> APP__core_settings 
+  APP__core_settings --> APP__core_common 
+  APP__core_settings --> gitlab.com_jaxnet_jaxnetd_jaxutil 
+  APP__core_settings --> fmt 
+  APP__core_settings --> time 
+  APP__core_settings --> gitlab.com_jaxnet_jaxnetd_types_chaincfg 
+  APP__core_settings --> flag 
+  APP__core_settings --> gopkg.in_yaml.v3 
+  APP__core_settings --> gitlab.com_jaxnet_jaxnetd_network_rpcclient 
+  APP__core_settings --> runtime 
+  APP__core_settings --> strings 
+  APP__core_utils --> github.com_btcsuite_btcd_wire 
+  APP__core_stratum --> bytes 
+  APP__core_utils --> bytes 
+  APP__core_stratum --> encoding_hex 
+  APP__core_utils --> encoding_hex 
+  APP__core_stratum --> fmt 
+  APP__core_utils --> fmt 
+  APP__core_stratum --> bufio 
+  APP__core_utils --> time 
+  APP__core_stratum --> time 
+  APP__core_utils --> strings 
+  APP__core_stratum --> strings 
+  APP__core_utils --> github.com_btcsuite_btcd_chaincfg_chainhash 
+  APP_ --> APP__core_stratum 
+  APP__core_stratum --> github.com_davecgh_go_spew_spew 
+  APP__core_stratum --> github.com_btcsuite_btcd_blockchain 
+  APP__core_stratum --> sync_atomic 
+  APP__core_stratum --> math 
+  APP__core_stratum --> APP__core_utils 
+  APP__core_stratum --> encoding_binary 
+  APP__core_stratum --> io 
+  APP__core_stratum --> github.com_btcsuite_btcutil 
+  APP__core_stratum --> math_big 
+  APP__core_stratum --> regexp 
+  APP__core_stratum --> gitlab.com_jaxnet_jaxnetd_types_chainhash 
+  APP__core_utils --> gitlab.com_jaxnet_jaxnetd_types_chainhash 
+  APP__core_utils --> math_rand 
+  APP__core_utils --> gitlab.com_jaxnet_jaxnetd_txscript 
+  APP__core_utils --> encoding_binary 
+  APP_ --> os 
+  APP__core_utils --> github.com_btcsuite_btcd_blockchain 
+  APP__core_utils --> gitlab.com_jaxnet_jaxnetd_node_chaindata 
+  APP_ --> syscall 
+  APP__core_utils --> math 
+  APP__core_utils --> gitlab.com_jaxnet_jaxnetd_jaxutil 
+  APP_ --> os_signal 
+  APP__core_utils --> github.com_btcsuite_btcutil 
+  APP_ --> net_http_pprof 
+
+
+}
+@enduml

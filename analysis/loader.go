@@ -6,6 +6,7 @@ import (
 	"go/types"
 	"strings"
 
+	"github.com/sheb-gregor/angiograph/data"
 	"github.com/xlab/treeprint"
 	"golang.org/x/tools/go/ssa/ssautil"
 )
@@ -93,9 +94,9 @@ func (opts AnalyseOpts) ImportsTree() (string, error) {
 
 		// fmt.Println(NewPkgTree(pkg.Pkg).IntoJSON())
 		// fmt.Println(NewPkgTree(pkg.Pkg).IntoTree().String())
-		index := NewPkgIndex(pkg.Pkg)
+		index := data.NewPkgIndex(pkg.Pkg)
 
-		fmt.Println(index.IntoJSON())
+		fmt.Println(index.IntoPUML(pkg.Pkg.Path()))
 		// fmt.Println(NewPkgTree(pkg.Pkg).IntoJSON())
 	}
 
@@ -104,7 +105,7 @@ func (opts AnalyseOpts) ImportsTree() (string, error) {
 
 func print(prefix string, pkg *types.Package, root string) {
 
-	_, ok := stdLib[strings.Split(pkg.Path(), "/")[0]]
+	_, ok := data.STDLib[strings.Split(pkg.Path(), "/")[0]]
 	if ok {
 		return
 	}
@@ -117,51 +118,4 @@ func print(prefix string, pkg *types.Package, root string) {
 		fmt.Println(prefix+"-->", spkg.Path())
 		print(prefix+"----", spkg, root)
 	}
-}
-
-var stdLib = map[string]struct{}{
-	"archive":   {},
-	"bufio":     {},
-	"builtin":   {},
-	"bytes":     {},
-	"cmd":       {},
-	"compress":  {},
-	"container": {},
-	"context":   {},
-	"crypto":    {},
-	"database":  {},
-	"debug":     {},
-	"embed":     {},
-	"encoding":  {},
-	"errors":    {},
-	"expvar":    {},
-	"flag":      {},
-	"fmt":       {},
-	"hash":      {},
-	"html":      {},
-	"image":     {},
-	"index":     {},
-	"internal":  {},
-	"io":        {},
-	"log":       {},
-	"math":      {},
-	"mime":      {},
-	"net":       {},
-	"os":        {},
-	"path":      {},
-	"plugin":    {},
-	"reflect":   {},
-	"regexp":    {},
-	"runtime":   {},
-	"sort":      {},
-	"strconv":   {},
-	"strings":   {},
-	"sync":      {},
-	"syscall":   {},
-	"testdata":  {},
-	"testing":   {},
-	"text":      {},
-	"time":      {},
-	"unicode":   {},
-	"unsafe":    {},
 }

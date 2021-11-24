@@ -1,7 +1,8 @@
-package analysis
+package data
 
 import (
 	"encoding/json"
+	"fmt"
 	"go/types"
 	"strings"
 )
@@ -120,7 +121,7 @@ func NewPkgIndex(pkg *types.Package) PkgIndex {
 func (index PkgIndex) Set(pkg *types.Package, root string) {
 	name := pkg.Path()
 
-	_, ok := stdLib[strings.Split(pkg.Path(), "/")[0]]
+	_, ok := STDLib[strings.Split(pkg.Path(), "/")[0]]
 	if ok {
 		return
 	}
@@ -177,3 +178,70 @@ func (index PkgIndex) IntoJSON() string {
 	res, _ := json.MarshalIndent(resArr, "", "  ")
 	return string(res)
 }
+
+func (index PkgIndex) IntoPUML(name string) string {
+	result := "@startuml\nleft to right direction\n  \n package \"" + name + "\" { \n"
+	for _, val := range index {
+		result += "    object \"" + val.Name + "\" as " + cleanStrings(val.Name, name) + " \n"
+	}
+	relationCache := map[string]struct{}{}
+	result += "\n\n"
+
+	for _, val := range index {
+		for s := range val.UsedBy {
+			rel := fmt.Sprintf("  %s --> %s \n", cleanStrings(s, name), cleanStrings(val.Name, name))
+			if _, ok := relationCache[rel]; ok {
+				continue
+			}
+			result += rel
+			relationCache[rel] = struct{}{}
+		}
+
+		for s := range val.Imports {
+			rel := fmt.Sprintf("  %s --> %s \n", cleanStrings(val.Name, name), cleanStrings(s, name))
+			if _, ok := relationCache[rel]; ok {
+				continue
+			}
+
+			result += rel
+			relationCache[rel] = struct{}{}
+		}
+	}
+
+	result += "\n\n}\n@enduml"
+
+	return result
+}
+
+var cleanCache = map[string]string{}
+
+func cleanStrings(in, prefix string) (res string) {
+	if s, ok := cleanCache[in]; ok {
+		return s
+	}
+
+	res = strings.Replace(in, prefix, "APP_", -1)
+	res = strings.Replace(res, "/", "_", -1)
+	res = strings.Replace(res, "-", "_", -1)
+	cleanCache[in] = res
+
+	return
+}
+
+// @startuml
+//
+// package test {
+// object London
+// object Washington
+// object Berlin
+// object NewYork
+//
+// map CapitalCity {
+// UK *-> London
+// USA *--> Washington
+// Germany *---> Berlin
+// }
+//
+// NewYork --> CapitalCity::USA
+// }
+// @enduml

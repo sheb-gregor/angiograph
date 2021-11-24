@@ -39,7 +39,11 @@ func initApp() *cli.App {
 			Deps:      true,
 			Private:   false,
 			PrintJSON: false,
-			Path:      "/box/projects/sheb/hermes",
+			// Path:      "/Users/mike/projects/sheb/hermes",
+			// Path:      "/Users/mike/projects/work_jax/shard.core",
+			Path: "/Users/mike/projects/work_jax/miner",
+			// Path: "/Users/mike/projects/work_jax/test-infrastructure",
+			// Path: "/Users/mike/projects/work_jax/test-infrastructure/cmd/tx-benchmark",
 			// Patterns:  c.Args().Tail(),
 		}
 		_, err := a.ImportsTree()
